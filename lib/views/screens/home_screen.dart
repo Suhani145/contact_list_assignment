@@ -1,3 +1,4 @@
+import 'package:contact_list/utils/colors.dart';
 import 'package:contact_list/views/widgets/alert_dialog_box.dart';
 import 'package:contact_list/views/widgets/contact_list.dart';
 import 'package:contact_list/views/widgets/form_layout.dart';
@@ -73,7 +74,15 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           const SizedBox(height: 10),
           Expanded(
-              child: Padding(
+            child: contacts.isEmpty?
+                Center(child: Text(showNoContact,
+                style: TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.w400,
+                  color: primaryColor,
+                ),
+                ))
+              : Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: ContactListView(
                   items: contacts,

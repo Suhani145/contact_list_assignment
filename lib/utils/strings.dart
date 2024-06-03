@@ -6,4 +6,4 @@ String errorTextForNumber = 'Enter Your number';
 String elevatedButtonText = 'Add';
 String alertDialogTitle = 'Confirmation';
 String alertDialogContent = 'Are you sure for delete?';
-
+String showNoContact = 'No contacts added';
