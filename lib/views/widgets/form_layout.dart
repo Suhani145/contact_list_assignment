@@ -16,6 +16,7 @@ class FormLayout extends StatelessWidget {
       key: formKey,
       child: Column(
         children: [
+          const SizedBox(height: 24),
           AppTextForm(
             controller: nameController,
             hintText: labelForName,
@@ -23,6 +24,7 @@ class FormLayout extends StatelessWidget {
             errorText: errorTextForName,
             inputTextType: TextInputType.text,
           ),
+          const SizedBox(height: 10),
           AppTextForm(
             controller: numberController,
             hintText: labelForNumber,
@@ -32,7 +34,7 @@ class FormLayout extends StatelessWidget {
             maxLength: 11,
           ),
           Padding(
-            padding: const EdgeInsets.only(right: 22, left:22, bottom: 42),
+            padding: const EdgeInsets.only(right: 21, left:21, bottom: 42),
             child: ElevatedButton(
               onPressed: () {
                 if (formKey.currentState!.validate()) {

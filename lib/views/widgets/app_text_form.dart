@@ -20,7 +20,7 @@ class AppTextForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20,  vertical: 10),
+      padding: const EdgeInsets.only(left: 21, right: 21),
       child: TextFormField(
           keyboardType: inputTextType,
           controller:controller,
