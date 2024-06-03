@@ -34,16 +34,16 @@ class ContactListView extends StatelessWidget {
                 icon:  Icon(Icons.call, color: callAndAlertDialogColor)
               ),
               tileColor: tileColor,
-              shape: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(8),
-                borderSide: BorderSide(color: tileColor),
-              ),
             ),
           ),
         );
       },
         separatorBuilder: (context, index)=> Divider(
-            thickness: 3.5,color: tileColor,
+            indent: 4,
+            endIndent: 4,
+            thickness: 2.5,
+            color: tileDivider,
+          height: 8,
         ),
     );
   }

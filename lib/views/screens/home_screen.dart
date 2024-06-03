@@ -26,12 +26,10 @@ class _HomeScreenState extends State<HomeScreen> {
     if(_formKey.currentState!.validate())
       {
         setState(() {
-          contacts.add(
-          {
+          contacts.add({
             'name': nameTEController.text,
             'number': numberTEController.text,
-          }
-          );
+          });
           nameTEController.clear();
           numberTEController.clear();
         });
@@ -43,7 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
       contacts.removeAt(index);
     });
   }
-  void _showDialogBox(int index)
+  void _showDialogBoxConfirmation(int index)
   {
     showDialog(context: context,
         builder:(context)=> AlertBoxForDeletion(
@@ -72,7 +70,6 @@ class _HomeScreenState extends State<HomeScreen> {
               numberController: numberTEController,
               addContact: _addContact,
           ),
-          const SizedBox(height: 10),
           Expanded(
             child: contacts.isEmpty?
                 Center(child: Text(showNoContact,
@@ -86,7 +83,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: ContactListView(
                   items: contacts,
-                  onLongPressed:_showDialogBox,
+                  onLongPressed:_showDialogBoxConfirmation,
                 ),
               )
           )

@@ -32,7 +32,7 @@ class FormLayout extends StatelessWidget {
             maxLength: 11,
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20,),
+            padding: const EdgeInsets.only(right: 22, left:22, bottom: 42),
             child: ElevatedButton(
               onPressed: () {
                 if (formKey.currentState!.validate()) {

@@ -43,7 +43,7 @@ class AlertBoxForDeletion extends StatelessWidget {
             deleteContact(index);
             Navigator.of(context).pop();
           },
-          icon: Icon(Icons.delete, color: callAndAlertDialogColor),
+          icon: Icon(Icons.delete_outline, color: callAndAlertDialogColor),
         ),
       ],
     );
